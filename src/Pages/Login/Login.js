@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import Seo from "../../Components/Seo/Seo";
 import { useHistory } from "react-router-dom";
 import "./Login.scss";
+import Logo from "./rp.png";
 
 function Login(props) {
   const history = useHistory();
@@ -18,12 +19,6 @@ function Login(props) {
     <div>
       <Seo title={"Republic City - Masuk"} />
       <div className="bg-login">
-        {/* logo */}
-        <div>
-          <img src="./rp.jpg.png" />
-        </div>
-        {/* logo end */}
-
         {/* card */}
         <div className="p-d-flex p-jc-center">
           <Card title="Masuk" subTitle="Sudah punya akun? Masukkan akun anda." className="vertical-center p-shadow-5">
