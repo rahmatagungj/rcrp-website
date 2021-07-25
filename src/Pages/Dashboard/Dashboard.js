@@ -47,26 +47,12 @@ function Dashboard(props) {
     </Link>
   );
 
-  const header = (
-    <img alt="Card" src="https://pbs.twimg.com/media/DCNFIo9XsAEVtbX.jpg" />
-  );
-  const footer = (
-    <span>
-      <Button label="Buka" icon="pi pi-check" />
-      <Button
-        label="Tutup"
-        icon="pi pi-times"
-        className="p-button-secondary p-ml-2"
-      />
-    </span>
-  );
-
   return (
     <div>
       <Menubar model={items} start={start} end={end} />
       <Seo title={"Republic City - Beranda"} />
       <div className="p-grid nested-grid p-m-2">
-        <div className="p-col-8">
+        <div className="p-col-12 p-md-8 p-lg-8">
           <div className="p-grid">
             <div className="p-col">
               <Card title="90" subTitle="Jam Bermain" />
@@ -84,21 +70,12 @@ function Dashboard(props) {
             </div>
           </div>
         </div>
-        <div className="p-col-4">
-          <Card
-            title="Geng dan Warga"
-            subTitle="Informasi Terbaru"
-            style={{ width: "25em" }}
-            footer={footer}
-            header={header}
-          >
-            <p className="p-m-0" style={{ lineHeight: "1.5" }}>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Inventore sed consequuntur error repudiandae numquam deserunt
-              quisquam repellat libero asperiores earum nam nobis, culpa ratione
-              quam perferendis esse, cupiditate neque quas!
-            </p>
-          </Card>
+        <div className="p-col-12 p-md-4 p-lg-4">
+          <div className="p-grid">
+            <div className="p-col">
+              <Card title="90" subTitle="Jam Bermain" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
