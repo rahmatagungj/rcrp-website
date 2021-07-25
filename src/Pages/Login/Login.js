@@ -18,12 +18,6 @@ function Login(props) {
     <div>
       <Seo title={"Republic City - Masuk"} />
       <div className="bg-login">
-        {/* logo */}
-        <div>
-          <img src="./rp.jpg.png" />
-        </div>
-        {/* logo end */}
-
         {/* card */}
         <div className="p-d-flex p-jc-center">
           <Card title="Masuk" subTitle="Sudah punya akun? Masukkan akun anda." className="vertical-center p-shadow-5">
