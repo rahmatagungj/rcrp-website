@@ -17,37 +17,45 @@ function Login(props) {
   return (
     <div>
       <Seo title={"Republic City - Masuk"} />
-      {/* card */}
-      <div className="p-d-flex p-jc-center">
-        <Card title="Masuk" subTitle="Sudah punya akun? Masukkan akun anda." className="vertical-center">
-          {/* username */}
-          <div className="p-fluid">
-            <div className="p-inputgroup">
-              <span className="p-inputgroup-addon">
-                <i className="pi pi-user"></i>
-              </span>
-              <InputText placeholder="Username" name="name" id="name" type="name" />
-            </div>
-          </div>
-          {/* username end */}
+      <div className="bg-login">
+        {/* logo */}
+        <div>
+          <img src="./rp.jpg.png" />
+        </div>
+        {/* logo end */}
 
-          {/* password */}
-          <div className="p-fluid">
-            <div className="p-inputgroup p-mt-2 p-mb-2">
-              <span className="p-inputgroup-addon">
-                <i className="pi pi-lock"></i>
-              </span>
-              <InputText placeholder="Username" name="name" id="name" type="name" />
+        {/* card */}
+        <div className="p-d-flex p-jc-center">
+          <Card title="Masuk" subTitle="Sudah punya akun? Masukkan akun anda." className="vertical-center p-shadow-5">
+            {/* username */}
+            <div className="p-fluid">
+              <div className="p-inputgroup">
+                <span className="p-inputgroup-addon">
+                  <i className="pi pi-user"></i>
+                </span>
+                <InputText placeholder="Username" name="name" id="name" type="name" />
+              </div>
             </div>
-          </div>
-          {/* password end */}
+            {/* username end */}
 
-          {/* button */}
-          <div className="p-fluid">
-            <Button label="Masuk" className="p-button-success" onClick={handleLogin} />
-          </div>
-          {/* button end */}
-        </Card>
+            {/* password */}
+            <div className="p-fluid">
+              <div className="p-inputgroup p-mt-2 p-mb-2">
+                <span className="p-inputgroup-addon">
+                  <i className="pi pi-lock"></i>
+                </span>
+                <InputText placeholder="Password" name="password" id="password" type="password" />
+              </div>
+            </div>
+            {/* password end */}
+
+            {/* button */}
+            <div className="p-fluid">
+              <Button label="Masuk" className="p-button-success" onClick={handleLogin} />
+            </div>
+            {/* button end */}
+          </Card>
+        </div>
       </div>
     </div>
   );
