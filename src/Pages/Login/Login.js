@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import Seo from "../../Components/Seo/Seo";
 import { useHistory } from "react-router-dom";
 import "./Login.scss";
-import Logo from "./rp.png";
 
 function Login(props) {
   const history = useHistory();
