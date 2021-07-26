@@ -1,56 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Seo from "../../Components/Seo/Seo";
-import { Menubar } from "primereact/menubar";
-import { Button } from "primereact/button";
 import "./Dashboard.scss";
 import { Card } from "primereact/card";
+import MenuBar from "./Components/MenuBar";
 
 function Dashboard() {
-  const items = [
-    {
-      label: "Akun",
-      icon: "pi pi-fw pi-user",
-      items: [
-        {
-          label: "Profil",
-          icon: "pi pi-user-edit",
-        },
-        {
-          separator: true,
-        },
-        {
-          label: "Pengaturan",
-          icon: "pi pi-cog",
-        },
-      ],
-    },
-    {
-      label: "Edit",
-      icon: "pi pi-fw pi-pencil",
-    },
-    {
-      label: "Kegiatan",
-      icon: "pi pi-fw pi-calendar",
-    },
-  ];
-
-  const start = <h3 className={"siteTitle"}>RCRP Panel Pengguna</h3>;
-
-  const end = (
-    <Link to="/">
-      <Button
-        label="Keluar"
-        icon="pi pi-power-off"
-        iconPos="left"
-        className={"p-button-danger"}
-      />
-    </Link>
-  );
-
   return (
     <div>
-      <Menubar model={items} start={start} end={end} />
+      <MenuBar />
       <Seo title={"Republic City - Beranda"} />
       <div className="p-grid nested-grid p-m-2">
         <div className="p-col-12 p-md-8 p-lg-8">
@@ -59,7 +16,7 @@ function Dashboard() {
               <Card title="90" subTitle="Jam Bermain" />
             </div>
             <div className="p-col">
-              <Card title="Title" subTitle="SubTitle" />
+              <Card title="2" subTitle="Total Karakter" />
             </div>
             <div className="p-col">
               <Card title="Title" subTitle="SubTitle" />
