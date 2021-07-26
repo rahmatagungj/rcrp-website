@@ -1,0 +1,60 @@
+.p-menubar {
+  background-color: #4caf50 !important;
+  border: none !important;
+}
+
+.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link {
+  &:hover {
+    background: #ade2a1 !important;
+  }
+  .p-menuitem-icon {
+    color: white !important;
+  }
+
+  .p-menuitem-text {
+    color: white !important;
+  }
+
+  .p-submenu-icon {
+    color: white !important;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .p-menubar .p-menubar-root-list {
+    background: #4caf50 !important;
+  }
+  .p-menubar .p-menubar-root-list .p-submenu-list {
+    background: #4caf50 !important;
+  }
+  .p-menubar .p-menuitem-link .p-menuitem-text,
+  .p-menubar .p-menuitem-link .p-menuitem-icon {
+    color: white !important;
+  }
+  .p-menubar .p-menuitem-link {
+    &:hover {
+      background: #ade2a1 !important;
+    }
+  }
+  .p-menubar
+    .p-menubar-root-list
+    > .p-menuitem.p-menuitem-active
+    > .p-menuitem-link,
+  .p-menubar
+    .p-menubar-root-list
+    > .p-menuitem.p-menuitem-active
+    > .p-menuitem-link:not(.p-disabled):hover {
+    background: #9bde8c !important;
+  }
+}
+
+.p-menubar-start {
+  h3 {
+    color: white;
+    margin-right: 15px;
+  }
+}
+
+.p-menubar-button {
+  color: white !important;
+}
