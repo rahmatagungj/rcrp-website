@@ -2,7 +2,6 @@ import React from "react";
 import { InputText } from "primereact/inputtext";
 import { Card } from "primereact/card";
 import { Button } from "primereact/button";
-import { Link } from "react-router-dom";
 import Seo from "../../Components/Seo/Seo";
 import { useHistory } from "react-router-dom";
 import "./Login.scss";
@@ -20,14 +19,23 @@ function Login(props) {
       <div className="bg-login">
         {/* card */}
         <div className="p-d-flex p-jc-center">
-          <Card title="Masuk" subTitle="Sudah punya akun? Masukkan akun anda." className="vertical-center p-shadow-5">
+          <Card
+            title="Masuk"
+            subTitle="Sudah punya akun? Masukkan akun anda."
+            className="vertical-center p-shadow-5"
+          >
             {/* username */}
             <div className="p-fluid">
               <div className="p-inputgroup">
                 <span className="p-inputgroup-addon">
                   <i className="pi pi-user"></i>
                 </span>
-                <InputText placeholder="Username" name="name" id="name" type="name" />
+                <InputText
+                  placeholder="Username"
+                  name="name"
+                  id="name"
+                  type="name"
+                />
               </div>
             </div>
             {/* username end */}
@@ -38,14 +46,23 @@ function Login(props) {
                 <span className="p-inputgroup-addon">
                   <i className="pi pi-lock"></i>
                 </span>
-                <InputText placeholder="Password" name="password" id="password" type="password" />
+                <InputText
+                  placeholder="Password"
+                  name="password"
+                  id="password"
+                  type="password"
+                />
               </div>
             </div>
             {/* password end */}
 
             {/* button */}
             <div className="p-fluid">
-              <Button label="Masuk" className="p-button-success" onClick={handleLogin} />
+              <Button
+                label="Masuk"
+                className="p-button-success"
+                onClick={handleLogin}
+              />
             </div>
             {/* button end */}
           </Card>
