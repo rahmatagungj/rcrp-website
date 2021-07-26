@@ -3,6 +3,7 @@ import { Menubar } from "primereact/menubar";
 import { Button } from "primereact/button";
 import { useHistory } from "react-router-dom";
 import { confirmDialog } from "primereact/confirmdialog";
+import "./MenuBar.scss";
 
 function MenuBar() {
   const history = useHistory();
