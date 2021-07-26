@@ -4,11 +4,25 @@ import "./Dashboard.scss";
 import { Card } from "primereact/card";
 import MenuBar from "./Components/MenuBar";
 
+const { useEffect, useState } = React;
+
 function Dashboard() {
+  const [isLoaded, setIsLoaded] = useState(false);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 3000);
+  }, []);
+
+  const RenderLoading = () => {
+    return <h1>Loading</h1>;
+  };
+
   return (
     <div>
       <MenuBar />
       <Seo title={"Republic City - Beranda"} />
+      {!isLoaded && <h1>Loading ...</h1>}
       <div className="p-grid nested-grid p-m-2">
         <div className="p-col-12 p-md-8 p-lg-8">
           <div className="p-grid">
