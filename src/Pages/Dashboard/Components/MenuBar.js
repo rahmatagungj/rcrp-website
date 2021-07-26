@@ -2,6 +2,8 @@ import React from "react";
 import { Menubar } from "primereact/menubar";
 import { Button } from "primereact/button";
 import { useHistory } from "react-router-dom";
+import { confirmDialog } from "primereact/confirmdialog";
+import "./MenuBar.scss";
 
 function MenuBar() {
   const history = useHistory();
@@ -9,6 +11,23 @@ function MenuBar() {
   const navigateToPage = (path) => {
     history.push(path);
   };
+
+  const accept = () => {
+    navigateToPage("/masuk");
+  };
+
+  const reject = () => null;
+
+  const confirmLogout = () =>
+    confirmDialog({
+      message: "Apakah kamu yamin akan keluar akun?",
+      header: "Konfirmasi",
+      icon: "pi pi-exclamation-triangle",
+      accept,
+      reject,
+      acceptLabel: "Keluar",
+      rejectLabel: "Batal",
+    });
 
   const items = [
     {
@@ -49,7 +68,7 @@ function MenuBar() {
       icon="pi pi-power-off"
       iconPos="left"
       className={"p-button-danger"}
-      onClick={() => navigateToPage("/masuk")}
+      onClick={() => confirmLogout()}
     />
   );
 
