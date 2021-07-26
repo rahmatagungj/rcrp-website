@@ -9,10 +9,13 @@ const { useEffect, useState } = React;
 
 function Dashboard() {
   const [isLoaded, setIsLoaded] = useState(false);
+
   useEffect(() => {
-    setTimeout(() => {
-      setIsLoaded(true);
-    }, 3000);
+    if (!isLoaded) {
+      setTimeout(() => {
+        setIsLoaded(true);
+      }, 3000);
+    }
   }, []);
 
   const RenderLoading = () => {
