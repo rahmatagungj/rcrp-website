@@ -20,7 +20,7 @@ function Login(props) {
         {/* card */}
         <div className="p-d-flex p-jc-center">
           <Card
-            title="Masuk"
+            title="Masuk "
             subTitle="Sudah punya akun? Masukkan akun anda."
             className="vertical-center p-shadow-5"
           >
