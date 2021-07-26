@@ -6,7 +6,7 @@ import { Button } from "primereact/button";
 import "./Dashboard.scss";
 import { Card } from "primereact/card";
 
-function Dashboard(props) {
+function Dashboard() {
   const items = [
     {
       label: "Akun",
@@ -36,6 +36,7 @@ function Dashboard(props) {
   ];
 
   const start = <h3 className={"siteTitle"}>RCRP Panel Pengguna</h3>;
+
   const end = (
     <Link to="/">
       <Button
